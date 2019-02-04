@@ -157,7 +157,7 @@ function init() {
     var addresses = ['R. Apeninos, 429 - Aclimação São Paulo - SP 01533-000'];
 
     for (var x = 0; x < addresses.length; x++) {
-        $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address=' + addresses[x] + '&key=AIzaSyC5LI2fO9ngCU5E8CNeBzsnPWsc_gh02Ok', null, function (data) {
+        $.getJSON('https://maps.googleapis.com/maps/api/geocode/json?address=' + addresses[x] + '&key=AIzaSyC5LI2fO9ngCU5E8CNeBzsnPWsc_gh02Ok', null, function (data) {
             var p = data.results[0].geometry.location
             var latlng = new google.maps.LatLng(p.lat, p.lng);
             new google.maps.Marker({
