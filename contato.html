@@ -23,7 +23,7 @@
     
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">    
   </head>
   <body>
     
@@ -81,18 +81,21 @@
         </div>
         <div class="row block-9">
           <div class="col-md-6 pr-md-5">
-            <form action="#">
+            <p class="message-success">Mensagem enviada com sucesso.</p>
+            <p class="message-error">Erro ao enviar mensagem. Tente novamente.</p>
+            <form action="send_mail.php" method="post">
+              <input type="hidden" value="contato" name="page">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Seu nome">
+                <input type="text" name="name" class="form-control" placeholder="Seu nome" required>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Seu e-mail">
+                <input type="text" name="email" class="form-control" placeholder="Seu e-mail" required>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Assunto">
+                <input type="text" name="subject" class="form-control" placeholder="Assunto" required>
               </div>
               <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Mensagem"></textarea>
+                <textarea name="" id="" name="message" cols="30" rows="7" class="form-control" placeholder="Mensagem" required></textarea>
               </div>
               <div class="form-group">
                 <input type="submit" value="Enviar mensagem" class="btn btn-primary py-3 px-5">

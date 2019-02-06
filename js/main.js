@@ -339,8 +339,21 @@ $(document).ready(function($) {
 	//   'autoclose': true
 	// });
 	// $('#m_time').timepicker();
-
+	
 
 
 });
 
+var search = location.search;
+if (search && search != "") {
+	var success = search.split("=");
+	if (success[0] === "?sucesso") {
+		if (success[1] === "true") {
+			$(".message-error").hide();
+			$(".message-success").show();
+		} else {
+			$(".message-success").hide();
+			$(".message-error").show();
+		}
+	}
+}
