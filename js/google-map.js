@@ -11,7 +11,7 @@ function init() {
 
     var mapOptions = {
         // How zoomed in you want the map to start at (always required)
-        zoom: 7,
+        zoom: 16,
 
         // The latitude and longitude to center the map (always required)
         center: myLatlng,
@@ -61,7 +61,7 @@ function init() {
               "featureType": "administrative.neighborhood",
               "stylers": [
                 {
-                  "visibility": "off"
+                  "visibility": "on"
                 }
               ]
             },
@@ -87,7 +87,7 @@ function init() {
               "elementType": "labels",
               "stylers": [
                 {
-                  "visibility": "off"
+                  "visibility": "on"
                 }
               ]
             },
@@ -96,7 +96,7 @@ function init() {
               "elementType": "labels.icon",
               "stylers": [
                 {
-                  "visibility": "off"
+                  "visibility": "on"
                 }
               ]
             },
@@ -104,7 +104,7 @@ function init() {
               "featureType": "road.arterial",
               "stylers": [
                 {
-                  "visibility": "off"
+                  "visibility": "on"
                 }
               ]
             },
@@ -113,7 +113,7 @@ function init() {
               "elementType": "labels",
               "stylers": [
                 {
-                  "visibility": "off"
+                  "visibility": "on"
                 }
               ]
             },
@@ -121,7 +121,7 @@ function init() {
               "featureType": "road.local",
               "stylers": [
                 {
-                  "visibility": "off"
+                  "visibility": "on"
                 }
               ]
             },
@@ -157,7 +157,7 @@ function init() {
     var addresses = ['R. Apeninos, 429 - Aclimação São Paulo - SP 01533-000'];
 
     for (var x = 0; x < addresses.length; x++) {
-        $.getJSON('https://maps.googleapis.com/maps/api/geocode/json?address=' + addresses[x] + '&key=AIzaSyC5LI2fO9ngCU5E8CNeBzsnPWsc_gh02Ok', null, function (data) {
+        $.getJSON('https://maps.googleapis.com/maps/api/geocode/json?address=' + addresses[x] + '&key=AIzaSyC5LI2fO9ngCU5E8CNeBzsnPWsc_gh02Ok&sensor=true', null, function (data) {
             var p = data.results[0].geometry.location
             var latlng = new google.maps.LatLng(p.lat, p.lng);
             new google.maps.Marker({

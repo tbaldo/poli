@@ -1,12 +1,13 @@
     /*
     Flaticon icon font: Flaticon
-    Creation date: 26/06/2018 06:54
+    Creation date: 05/02/2019 23:38
     */
 
     @font-face {
   font-family: "Flaticon";
   src: url("./Flaticon.eot");
   src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff2") format("woff2"),
        url("./Flaticon.woff") format("woff"),
        url("./Flaticon.ttf") format("truetype"),
        url("./Flaticon.svg#Flaticon") format("svg");
@@ -36,20 +37,14 @@
   font-smoothing: antialiased;
     }
 
-    .flaticon-trophy:before { content: "\f100"; }
-.flaticon-medal:before { content: "\f101"; }
-.flaticon-handshake:before { content: "\f102"; }
-.flaticon-lawyer:before { content: "\f103"; }
-.flaticon-health-insurance:before { content: "\f104"; }
-.flaticon-courthouse:before { content: "\f105"; }
-.flaticon-balance:before { content: "\f106"; }
-.flaticon-gavel:before { content: "\f107"; }
+    .flaticon-quotation:before { content: "\f100"; }
+.flaticon-psi:before { content: "\f101"; }
+.flaticon-head:before { content: "\f102"; }
+.flaticon-head-1:before { content: "\f103"; }
+.flaticon-brain-1:before { content: "\f104"; }
     
-    $font-Flaticon-trophy: "\f100";
-    $font-Flaticon-medal: "\f101";
-    $font-Flaticon-handshake: "\f102";
-    $font-Flaticon-lawyer: "\f103";
-    $font-Flaticon-health-insurance: "\f104";
-    $font-Flaticon-courthouse: "\f105";
-    $font-Flaticon-balance: "\f106";
-    $font-Flaticon-gavel: "\f107";
+    $font-Flaticon-quotation: "\f100";
+    $font-Flaticon-psi: "\f101";
+    $font-Flaticon-head: "\f102";
+    $font-Flaticon-head-1: "\f103";
+    $font-Flaticon-brain-1: "\f104";
