@@ -351,9 +351,11 @@ if (search && search != "") {
 		if (success[1] === "true") {
 			$(".message-error").hide();
 			$(".message-success").show();
+			document.getElementById('message-email').scrollIntoView();
 		} else {
 			$(".message-success").hide();
 			$(".message-error").show();
+			document.getElementById('message-email').scrollIntoView();
 		}
 	}
 }

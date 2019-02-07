@@ -47,7 +47,7 @@
     </nav>
     <!-- END nav -->
 
-    <section class="ftco-cover overlay" style="background-image: url(images/image_5.jpg);" id="section-home" data-aos="fade"  data-stellar-background-ratio="0.5">
+    <section class="ftco-cover overlay" style="background-image: url(images/bg_5.jpg);" id="section-home" data-aos="fade"  data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row align-items-center justify-content-center ftco-vh-100">
@@ -78,26 +78,29 @@
     <div class="container">
       <div class="row justify-content-center mb-5 pb-5">
         <div class="col-md-7 text-center"  data-aos="fade-up">
-          <h2>Agende uma consulta</h2>
+          <h2 id="message-email">Agende uma consulta</h2>
         </div>
       </div>
       <div class="row block-9 justify-content-center" data-aos="fade-up">
         <div class="col-md-8 pr-md-5">
-          <form action="#">
+          <p class="message-success">Mensagem enviada com sucesso.</p>
+          <p class="message-error">Erro ao enviar mensagem. Tente novamente.</p>
+          <form action="send_mail.php" method="post">
+            <input type="hidden" value="psicoterapia-pra-que" name="page">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Seu nome">
+              <input type="text" id="name" name="name" class="form-control" placeholder="Seu nome" required>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Seu e-mail">
+              <input type="text" id="email" name="email" class="form-control" placeholder="Seu e-mail" required>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Assunto">
+              <input type="text" id="subject" name="subject" class="form-control" placeholder="Assunto" required>
             </div>
             <div class="form-group">
-              <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Mensagem"></textarea>
+              <textarea id="message" name="message" cols="30" rows="7" class="form-control" placeholder="Mensagem" required></textarea>
             </div>
-            <div class="form-group text-center">
-              <input type="submit" value="Enviar" class="btn btn-primary">
+            <div class="form-group">
+              <input type="submit" value="Enviar mensagem" class="btn btn-primary py-3 px-5">
             </div>
           </form>
         </div>
@@ -106,50 +109,50 @@
   </div>
   
   <footer class="ftco-footer ftco-bg-dark ftco-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Sobre</h2>
-              <ul class="list-unstyled">
-                <li><a href="index.html" class="py-2 d-block">Início</a></li>
-                <li><a href="perfil.html" class="py-2 d-block">Perfil</a></li>
-                <li><a href="especialidades.html" class="py-2 d-block">Especialidades</a></li>
-                <li><a href="psicoterapia-pra-que.html" class="py-2 d-block">Psicoterapia para quê?</a></li>
-                <li><a href="contato.html" class="py-2 d-block">Agendar Consulta</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Informações de contato</h2>
-              <ul class="list-unstyled">
-                <li><a href="javascript:return" class="py-2 d-block">Rua um, numero 10</a></li>
-                <li><a href="javascript:return" class="py-2 d-block">11 9 8888-2222</a></li>
-                <li><a href="javascript:return" class="py-2 d-block">contato@poliana.com</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Horario de atendimento</h2>
-              <ul class="list-unstyled">
-                <li><a href="javascript:return" class="py-2 d-block">Clínica: Segunda - Sexta: 9:00 - 18:00</a></li>
-                <li><a href="javascript:return" class="py-2 d-block">Plantões Online: Todos os dias das 8:00 as 20:00</a></li>
-              </ul>
-            </div>
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">Sobre</h2>
+            <ul class="list-unstyled">
+              <li><a href="index.html" class="py-2 d-block">Início</a></li>
+              <li><a href="perfil.html" class="py-2 d-block">Perfil</a></li>
+              <li><a href="especialidades.html" class="py-2 d-block">Especialidades</a></li>
+              <li><a href="psicoterapia-pra-que.html" class="py-2 d-block">Psicoterapia para quê?</a></li>
+              <li><a href="contato.html" class="py-2 d-block">Agendar Consulta</a></li>
+            </ul>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
-  
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" class="text-primary">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+        <div class="col-md">
+           <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">Informações de contato</h2>
+            <ul class="list-unstyled">
+              <li><a href="javascript:return" class="py-2 d-block">R. Apeninos, 429 - Aclimação São Paulo - SP 01533-000</a></li>
+              <li><a href="javascript:return" class="py-2 d-block">+55 11 94397-2173</a></li>
+              <li><a href="javascript:return" class="py-2 d-block">contato@polianapsicologia.com.br</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md">
+           <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">Horario de atendimento</h2>
+            <ul class="list-unstyled">
+              <li><a href="javascript:return" class="py-2 d-block">Clínica: Segunda - Sexta: 9:00 - 18:00</a></li>
+              <li><a href="javascript:return" class="py-2 d-block">Online: Segunda - Sexta: 9:00 - 21:00</a></li>
+            </ul>
           </div>
         </div>
       </div>
-    </footer>
+      <div class="row">
+        <div class="col-md-12 text-center">
+
+          <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" class="text-primary">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
@@ -168,6 +171,13 @@
   <script src="js/jquery.animateNumber.min.js"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/google-analytics.js"></script>
+  <script>
+    ga('send', {
+      hitType: 'pageview',
+      page: location.pathname
+    });
+  </script>
     
   </body>
 </html>

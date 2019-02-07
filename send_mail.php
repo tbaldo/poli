@@ -4,35 +4,36 @@ function getValue($value) {
     return isset($_POST[$value]) ? $_POST[$value] : '';
 }
 
-function validaEmail($email) {
-    return filter_var($email, FILTER_VALIDATE_EMAIL);
-}
-
-function send($from, $subject, $message, $to, $email_reply, $name) {
-    $headers = "From: $email_reply\r\n" .
-               "Reply-To: $from\r\n" .
-               "X-Mailer: PHP/" . phpversion() . "\r\n";
-    $headers .= "MIME-Version: 1.0\r\n";
-    $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
-  
-  mail($to, $subject, nl2br($name"\r\n". $message), $headers);
-}
-
-$email_reply = "email@reply.com";
-$to = "tiago.b.baldo@gmail.com";
+$email_site = "contato@polianapsicologia.com.br";
+$to = "contato@polianapsicologia.com.br";
 $from = getValue("email");
 $message = getValue("message");
 $subject = getValue("subject");
 $name = getValue("name");
 $page = getValue("page");
 
-if (validaEmail($from) && $message && $subject && $name) {
-    enviaEmail($from, $subject, $message, $to, $email_reply, $name);
-    $redir = $page . "html?sucesso=true";
+$headers  = 'MIME-Version: 1.0' . "\r\n";
+$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+$headers .= "From: $name <$email_site> \r\n";
+$headers .= "Reply-To: $from";
+  
+$send = mail($to, $subject, $message, $headers);
+
+if ($send) {
+    $redir = $page . ".html?sucesso=true";
+    echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$redir.'">';
 } else {
-    $redir = $page . "html?sucesso=false";
+    $redir = $page . ".html?sucesso=false";
+    echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$redir.'">';
 }
 
-header("location:$redir");
-
 ?>
+<html>
+    <script src="js/google-analytics.js"></script>
+    <script>
+        ga('send', {
+            hitType: 'pageview',
+            page: location.pathname
+        });
+    </script>
+</html>

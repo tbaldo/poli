@@ -66,17 +66,17 @@
       <div class="container bg-light">
         <div class="row d-flex mb-5 contact-info">
           <div class="col-md-12 mb-4">
-            <h2 class="h4">Informações de contato</h2>
+            <h2 class="h4" id="message-email">Informações de contato</h2>
           </div>
           <div class="w-100"></div>
           <div class="col-md-4">
-            <p><span>Endereço: </span>Ponto Clínico</p>
+            <p><span>Endereço: </span>R. Apeninos, 429 - Aclimação São Paulo - SP 01533-000</p>
           </div>
           <div class="col-md-4">
-            <p><span>Telefone:</span> <a href="tel://+5511912344321">+55 11 9.1234-4321</a></p>
+            <p><span>Telefone:</span> <a href="tel://+5511943972173">+55 11 94397-2173</a></p>
           </div>
           <div class="col-md-4">
-            <p><span>E-mail:</span> <a href="mailto:contato@poliana.com">contato@poliana.com</a></p>
+            <p><span>E-mail:</span> <a href="mailto:contato@polianapsicologia.com.br">contato@polianapsicologia.com.br</a></p>
           </div>
         </div>
         <div class="row block-9">
@@ -86,22 +86,21 @@
             <form action="send_mail.php" method="post">
               <input type="hidden" value="contato" name="page">
               <div class="form-group">
-                <input type="text" name="name" class="form-control" placeholder="Seu nome" required>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Seu nome" required>
               </div>
               <div class="form-group">
-                <input type="text" name="email" class="form-control" placeholder="Seu e-mail" required>
+                <input type="text" id="email" name="email" class="form-control" placeholder="Seu e-mail" required>
               </div>
               <div class="form-group">
-                <input type="text" name="subject" class="form-control" placeholder="Assunto" required>
+                <input type="text" id="subject" name="subject" class="form-control" placeholder="Assunto" required>
               </div>
               <div class="form-group">
-                <textarea name="" id="" name="message" cols="30" rows="7" class="form-control" placeholder="Mensagem" required></textarea>
+                <textarea id="message" name="message" cols="30" rows="7" class="form-control" placeholder="Mensagem" required></textarea>
               </div>
               <div class="form-group">
                 <input type="submit" value="Enviar mensagem" class="btn btn-primary py-3 px-5">
               </div>
             </form>
-          
           </div>
 
           <div class="col-md-6" id="map"></div>
@@ -128,9 +127,9 @@
                <div class="ftco-footer-widget mb-4">
                 <h2 class="ftco-heading-2">Informações de contato</h2>
                 <ul class="list-unstyled">
-                  <li><a href="javascript:return" class="py-2 d-block">Rua um, numero 10</a></li>
-                  <li><a href="javascript:return" class="py-2 d-block">11 9 8888-2222</a></li>
-                  <li><a href="javascript:return" class="py-2 d-block">contato@poliana.com</a></li>
+                  <li><a href="javascript:return" class="py-2 d-block">R. Apeninos, 429 - Aclimação São Paulo - SP 01533-000</a></li>
+                  <li><a href="javascript:return" class="py-2 d-block">+55 11 94397-2173</a></li>
+                  <li><a href="javascript:return" class="py-2 d-block">contato@polianapsicologia.com.br</a></li>
                 </ul>
               </div>
             </div>
@@ -139,7 +138,7 @@
                 <h2 class="ftco-heading-2">Horario de atendimento</h2>
                 <ul class="list-unstyled">
                   <li><a href="javascript:return" class="py-2 d-block">Clínica: Segunda - Sexta: 9:00 - 18:00</a></li>
-                  <li><a href="javascript:return" class="py-2 d-block">Plantões Online: Todos os dias das 8:00 as 20:00</a></li>
+                  <li><a href="javascript:return" class="py-2 d-block">Online: Segunda - Sexta: 9:00 - 21:00</a></li>
                 </ul>
               </div>
             </div>
@@ -173,6 +172,12 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5LI2fO9ngCU5E8CNeBzsnPWsc_gh02Ok"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
-    
+  <script src="js/google-analytics.js"></script>
+  <script>
+    ga('send', {
+      hitType: 'pageview',
+      page: location.pathname
+    });
+  </script>
   </body>
 </html>
