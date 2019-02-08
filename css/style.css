@@ -7611,7 +7611,7 @@ textarea.form-control {
   padding: 12em 0; }
 
 .ftco-section {
-  padding: 7em 0; }
+  padding: 0em 0; }
 
 .ftco-bg-dark {
   background: #3c312e; }
@@ -7620,7 +7620,7 @@ textarea.form-control {
   font-size: 16px;
   background: #fff;
   border-top: 1px solid #eeeeee;
-  padding: 8em 0; }
+  padding-top: 4em; }
   .ftco-footer .ftco-footer-logo {
     text-transform: uppercase;
     letter-spacing: .1em; }

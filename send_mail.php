@@ -4,8 +4,8 @@ function getValue($value) {
     return isset($_POST[$value]) ? $_POST[$value] : '';
 }
 
-$email_site = "contato@polianapsicologia.com.br";
-$to = "contato@polianapsicologia.com.br";
+$email_site = "contato@psicologapoliana.com.br";
+$to = "contato@psicologapoliana.com.br";
 $from = getValue("email");
 $message = getValue("message");
 $subject = getValue("subject");
