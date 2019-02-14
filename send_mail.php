@@ -5,7 +5,7 @@ function getValue($value) {
 }
 
 $email_site = "contato@psicologapoliana.com.br";
-$to = "contato@psicologapoliana.com.br";
+$to = "psicologapoliana.araujo@gmail.com";
 $from = getValue("email");
 $message = getValue("message");
 $subject = getValue("subject");
